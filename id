@@ -1,3 +1,5 @@
 157465836336-3vcah4bqikpiegrsog3rkop39obck2gj.apps.googleusercontent.com
 
 ionic cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.157465836336-3vcah4bqikpiegrsog3rkop39obck2gj
+
+ionic cordova plugin add cordova-plugin-facebook4 --variable APP_ID="726996437657711" --variable APP_NAME="chamadapp"

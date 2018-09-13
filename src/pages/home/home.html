@@ -27,5 +27,14 @@
     </ion-list>
     <button ion-button clear small block (click)="logout()">logout</button>
   </div>
-  <button *ngIf="!isUserLoggedIn" ion-button block (click)="googleLogin()">Login with Google +</button>
+  <button *ngIf="!isUserLoggedIn" ion-button round color="danger" block (click)="googleLogin()">
+    <ion-icon name="logo-googleplus"></ion-icon>
+    Login with Google+
+  </button>
+
+  <button *ngIf="!isUserLoggedIn" ion-button round block (click)="facebookLogin()">
+    <ion-icon name="logo-facebook"></ion-icon>
+    Login with Facebook
+  </button>
+
 </ion-content>

@@ -14,14 +14,16 @@ export class HomePage {
   userData: any = {};
 
   constructor(public toastCtrl: ToastController, public platform: Platform, public googleplus: GooglePlus) {
-    firebase.auth().onAuthStateChanged(authData => {
-      if (authData != null) {
-        this.isUserLoggedIn = true;
-        this.userData = authData;
-        console.log(authData);
-      } else {
-        this.userData = {};
-      }
+    platform.ready().then(() => {
+      firebase.auth().onAuthStateChanged(authData => {
+        if (authData != null) {
+          this.isUserLoggedIn = true;
+          this.userData = authData;
+          console.log(authData);
+        } else {
+          this.userData = {};
+        }
+      });
     });
   }
 
@@ -41,7 +43,7 @@ export class HomePage {
         this.displayToast('Login Success')
         this.userData = gpRes.additionalUserInfo.profile;
       }).catch(err => this.displayToast(err));
-     
+
     }
 
     // cordova login

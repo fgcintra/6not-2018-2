@@ -41,6 +41,7 @@ export class HomePage {
         this.displayToast('Login Success')
         this.userData = gpRes.additionalUserInfo.profile;
       }).catch(err => this.displayToast(err));
+     
     }
 
     // cordova login

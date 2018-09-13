@@ -55,8 +55,8 @@ export class HomePage {
         let credential = firebase.auth.GoogleAuthProvider.credential(success['idToken'], null);
         firebase.auth().signInWithCredential(credential).then((data) => {
           console.log(data);
-        }).catch((err) => this.displayToast(err));
-      }, err => this.displayToast(err));
+        }).catch((err) => this.displayToast('[ERRO 1]' + err));
+        }, err => this.displayToast('[ERRO 2]' + err));
     }
   }
 }

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Firebase Google Authentication
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>Cordova Plugin Firebase foi instalado</p>
+  <!-- show if user logged in -->
+  <div *ngIf="isUserLoggedIn">
+    <ion-list>
+      <ion-item>
+        <ion-avatar item-left>
+          <img [src]="userData.photoURL">
+        </ion-avatar>
+        <h2>{{ userData.displayName }}</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email: {{userData.email}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email Verified: {{userData.emailVerified}}</ion-label>
+      </ion-item>
+      
+    </ion-list>
+    <button ion-button clear small block (click)="logout()">logout</button>
+  </div>
+  <button *ngIf="!isUserLoggedIn" ion-button block (click)="googleLogin()">Login with Google +</button>
+</ion-content>

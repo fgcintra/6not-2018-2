@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "157465836336",
+    "firebase_url": "https://chamadapp.firebaseio.com",
+    "project_id": "chamadapp",
+    "storage_bucket": "chamadapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157465836336:android:ed28da6a55429d1e",
+        "android_client_info": {
+          "package_name": "br.edu.fatecfranca.chamadapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157465836336-3vcah4bqikpiegrsog3rkop39obck2gj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.edu.fatecfranca.chamadapp",
+            "certificate_hash": "d654f1daea8688b6f56d3a381eea84f5ebfc2e48"
+          }
+        },
+        {
+          "client_id": "157465836336-tkc6lcbe014i1l2f7p884irb7137ki8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxPmlL0V90ip06DT-vWZSxX7bcofUNaBU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157465836336-tkc6lcbe014i1l2f7p884irb7137ki8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -178,7 +178,7 @@
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.8.tgz#38a936b60b898a1ad0f3719543ff1a1031f60f8b"
 
-"@ionic-native/core@~4.12.0":
+"@ionic-native/core@^4.12.2":
   version "4.12.2"
   resolved "https://registry.yarnpkg.com/@ionic-native/core/-/core-4.12.2.tgz#80ffab6cc5470c56ade0743b72af9e7af398cfb5"
 

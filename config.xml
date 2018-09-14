@@ -82,10 +82,10 @@
     <plugin name="cordova-plugin-googleplus" spec="^5.3.1">
         <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.157465836336-3vcah4bqikpiegrsog3rkop39obck2gj" />
     </plugin>
-    <engine name="android" spec="7.0.0" />
     <plugin name="cordova-plugin-facebook4" spec="^2.5.0">
         <variable name="APP_ID" value="726996437657711" />
         <variable name="APP_NAME" value="chamadapp" />
         <variable name="FACEBOOK_ANDROID_SDK_VERSION" value="4.+" />
     </plugin>
+    <engine name="android" spec="~6.3.0" />
 </widget>

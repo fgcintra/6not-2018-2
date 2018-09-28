@@ -52,6 +52,7 @@ export class HomePage {
         // browser login
         if (this.platform.is('core')) {
             firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(gpRes => {
+                console.log(gpRes);
                 this.displayToast('Login Success')
                 this.userData = gpRes.additionalUserInfo.profile;
             }).catch(err => this.displayToast(err));
@@ -73,6 +74,18 @@ export class HomePage {
     }
 
     facebookLogin() {
+        
+        firebase.auth().signInWithRedirect(
+            new firebase.auth.FacebookAuthProvider()
+        );
+        
+        firebase.auth().getRedirectResult().then(gpRes => {
+            this.displayToast('Login Success')
+            this.userData = gpRes.additionalUserInfo.profile;
+        }).catch(err => this.displayToast(err));
+
+        /*
+
         // browser login
         if (this.platform.is('core')) {
             firebase.auth().signInWithPopup(new firebase.auth.FacebookAuthProvider()).then(gpRes => {
@@ -92,6 +105,8 @@ export class HomePage {
                 }).catch((err) => this.displayToast('[ERRO 1]' + err));
             }, err => this.displayToast('[ERRO 2]' + err));
         }
+
+        */
     }
 
 }

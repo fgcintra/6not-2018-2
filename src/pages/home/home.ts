@@ -49,6 +49,17 @@ export class HomePage {
 
     googleLogin() {
 
+        // Autenticação sem Cordova
+        firebase.auth().signInWithRedirect(
+            new firebase.auth.GoogleAuthProvider()
+        );
+
+        firebase.auth().getRedirectResult().then(gpRes => {
+            this.displayToast('Login Success')
+            this.userData = gpRes.additionalUserInfo.profile;
+        }).catch(err => this.displayToast(err));
+
+        /*
         // browser login
         if (this.platform.is('core')) {
             firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(gpRes => {
@@ -70,11 +81,12 @@ export class HomePage {
                     console.log(data);
                 }).catch((err) => this.displayToast('[ERRO 1]' + err));
             }, err => this.displayToast('[ERRO 2]' + err));
-        }
+        }*/
     }
 
     facebookLogin() {
         
+        // Autenticação sem Cordova
         firebase.auth().signInWithRedirect(
             new firebase.auth.FacebookAuthProvider()
         );

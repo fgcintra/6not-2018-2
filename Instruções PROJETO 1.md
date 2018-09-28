@@ -3,7 +3,7 @@ INSTRUÇÕES PARA FINALIZAÇÃO DO PROJETO 1
 
 1. Criar nova aplicação no Firebase (https://firebase.google.com). **Ir para console** -> **Adicionar novo projeto** -> `chamadapp-<SEU RA>`.
 
-2. No Firebase, adicionar a plataforma Android. *Nome do pacote Android*: `br.edu.fatecfranca.<SEU RA>`.
+2. No Firebase, adicionar a plataforma Android. *Nome do pacote Android*: `br.edu.fatecfranca.ra<SEU RA>`.
 
 3. Baixe o arquivo `google-services.json` e o salve na pasta raiz do seu projeto.
 

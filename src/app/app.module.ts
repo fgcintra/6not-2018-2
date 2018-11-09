@@ -7,15 +7,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { DashboardPage } from '../pages/dashboard/dashboard';
+import { QrReaderPage } from '../pages/qr-reader/qr-reader';
 
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Facebook } from '@ionic-native/facebook';
+
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    DashboardPage
+    DashboardPage,
+    QrReaderPage
   ],
   imports: [
     BrowserModule,
@@ -25,13 +29,15 @@ import { Facebook } from '@ionic-native/facebook';
   entryComponents: [
     MyApp,
     HomePage,
-    DashboardPage
+    DashboardPage,
+    QrReaderPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     GooglePlus,
     Facebook,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import * as firebase from 'firebase';
 import { HomePage } from '../home/home';
+import { QrReaderPage } from '../qr-reader/qr-reader';
 
 /**
  * Generated class for the DashboardPage page.
@@ -29,6 +30,10 @@ export class DashboardPage {
   logOut() {
     firebase.auth().signOut();
     this.navCtrl.setRoot(HomePage);
+  }
+
+  showQrReaderPage() {
+    this.navCtrl.push(QrReaderPage);
   }
 
 }

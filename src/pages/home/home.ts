@@ -25,6 +25,7 @@ export class HomePage {
         public navCtrl : NavController
         ) {
         platform.ready().then(() => {
+            
             firebase.auth().onAuthStateChanged(authData => {
                 if (authData != null) {
                     this.isUserLoggedIn = true;
@@ -121,4 +122,5 @@ export class HomePage {
         */
     }
 
+    
 }

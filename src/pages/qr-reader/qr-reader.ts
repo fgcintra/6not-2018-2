@@ -29,7 +29,7 @@ export class QrReaderPage {
   scan() {
     this.qrScanner.scan().then(
       qrData => {
-        console.log(qrData);
+        console.log(qrData.text);
       }
     );
   }
